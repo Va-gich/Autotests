@@ -19,11 +19,6 @@ def check_region():
     title_1 = str(soup_1.findAll('span', {'class': 'sbis_ru-Region-Chooser__text sbis_ru-link'}))
     region_1 = regex.findall(r'>([\p{Cyrillic} \.]+)<', title_1)
 
-    # if region[0] == region_1[0]:
-    #     return 'Регион не изменился'
-    # else:
-    #     return 'Регион изменился'
-
     return region[0], region_1[0]
 
 
